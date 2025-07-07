@@ -60,7 +60,7 @@ function Footer() {
           </Link>
         ))}
       </div>
-      <p className="text-[#757575] text-base font-normal leading-normal">@2024 Luxe Threads. All rights reserved.</p>
+      <p className="text-[#757575] text-base font-normal leading-normal">@2024 lol Threads. All rights reserved.</p>
     </footer>
   );
 }
