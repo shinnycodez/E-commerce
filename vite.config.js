@@ -8,27 +8,12 @@ export default defineConfig({
   build: {
     reportCompressedSize: false,
     commonjsOptions: { transformMixedEsModules: true },
-    rollupOptions: {
-      // Prevent Vite from bundling server-only or problematic Node modules
-      external: [
-        'fs',
-        'path',
-        'os',
-        'module',
-        'crypto',
-        'stream',
-        'util',
-        'zlib',
-        'net',
-        'tls',
-        'child_process'
-      ],
-    },
   },
   plugins: [
     tailwindcssPlugin(),
     viteConfigPaths(),
     viteReactPlugin(),
+    // eslint-disable-next-line no-undef
     process.env.INLINE ? viteSingleFile() : null,
   ].filter(Boolean),
 });
